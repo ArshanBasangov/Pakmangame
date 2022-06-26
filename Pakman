@@ -187,16 +187,16 @@ int main() {
     RenderWindow window(VideoMode(W * ts, H * ts), "Labirinth!");
 
     Texture t;
-    t.loadFromFile("C:/Users/Gilyana/source/repos/Project2/Project2/mitle.png");
+    t.loadFromFile("mitle.png");
     Sprite plat(t);
 
     Texture yw;
-    yw.loadFromFile("C:/Users/Gilyana/source/repos/Project2/Project2/youwin.png");
+    yw.loadFromFile("youwin.png");
     Sprite youwin(yw);
     youwin.setPosition(100, 210);
 
     Texture yl;
-    yl.loadFromFile("C:/Users/Gilyana/source/repos/Project2/Project2/youlose.png");
+    yl.loadFromFile("youlose.png");
     Sprite youlose(yl);
     youlose.setPosition(100, 210);
 
