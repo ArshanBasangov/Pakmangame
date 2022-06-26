@@ -37,8 +37,8 @@ String TileMap[H] = {
 "A3               4A",
 "AAAAAAAAAAAAAAAAAAA",
 };
-
-class Player {
+ 
+class Player { //Класс игрока отвечает за передвижение игрока по карте и анимацию движения
 
 public:
     float frame = 0;
@@ -105,7 +105,7 @@ public:
     }
 };
  
-//Положение врагоы и их движение
+//Положение врагов и их движение
 class Enemy {
 public:
     int x[4] = { 1, 17, 1, 17 }, y[4] = { 1, 1, 19, 19 };
