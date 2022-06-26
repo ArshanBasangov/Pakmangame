@@ -9,10 +9,7 @@ float frame = 6;
 void Coord() {
     if (frame > 5) {
 	frame -= 5;
-
-
-		assert(frame == 1);
-
-		cout << "Ok";
-	}
+	assert(frame == 1);
+	cout << "Ok";
+    }
 }
