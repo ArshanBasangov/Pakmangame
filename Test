@@ -4,11 +4,16 @@
 
 using namespace std;
 
-newx = 14;
-y = 2;
-Coor = newx + 1;
+float frame = 6;
 
-void Coord() {
-	assert(Coor(15) == true)
-	cout << "Ok";
+if (frame > 5) {
+	frame -= 5;
+
+
+
+	void Coord() {
+		assert(frame == 1);
+
+		cout << "Ok";
+	}
 }
