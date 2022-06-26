@@ -3,17 +3,17 @@
 
 using namespace sf;
 
-//Ďŕđŕěĺňđű ęŕđňű (âűńîňŕ č řččđíŕ)
+//Параметры карты
 const int H = 21;
 const int W = 19;
 
 const int ts = 25;
 
-//Ęîýôôčöčĺíň âűčăđŕřŕ č ćčçíč
+//Индикаторы очков и жизни
 int q = 0;
 bool life = true;
 
-//Ńňđóęňóđŕ ęŕđňű
+//Структура карты
 String TileMap[H] = {
 "AAAAAAAAAAAAAAAAAAA",
 "A1       A       2A",
@@ -46,7 +46,7 @@ public:
     int newx = 0, newy = 0;
     int rotate = 1, ti = 0;
 
-//Ďĺđĺäâčćĺíčĺ č âçŕčěîäĺéńňâčĺ čăđîęŕ
+//Функция отвечает за передвижение и анимацию игрока
     void update() {
 
         frame += 0.01;
@@ -105,7 +105,7 @@ public:
     }
 };
  
-//Âđŕăč
+//Положение врагоы и их движение
 class Enemy {
 public:
     int x[4] = { 1, 17, 1, 17 }, y[4] = { 1, 1, 19, 19 };
@@ -180,7 +180,7 @@ public:
     }
 };
 
-//Îňđčńîâęŕ ęŕđňű
+//Отрисовка карты и персонажей
 
 int main() {
     srand(time(0));
@@ -233,7 +233,7 @@ int main() {
         }
         window.clear(Color::Black);
 
-        //Ďđîđčńîâęŕ ęŕđňű
+        //Отрисовка карты
         for (int i = 0; i < H; i++)
             for (int j = 0; j < W; j++) {
                 if (TileMap[i][j] == 'A')
@@ -256,10 +256,10 @@ int main() {
                 plat.setPosition(j * ts, i * ts);
                 window.draw(plat);
             }
-        //Âűčăđűř
+        //Выигрыш
         if (q == 171)
             window.draw(youwin);
-        //Ďđîčăđűř
+        //Проигрыш
         if (!life)
             window.draw(youlose);
 
